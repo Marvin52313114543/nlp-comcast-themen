@@ -1,8 +1,9 @@
-## Verwendung Code/Projekt
-1. Repository klonen und in den Projektordner wechseln:
+## Verwendung Code/Projekt - Anleitung unter Mac getestet
+1. Repository klonen, in den Projektordner wechseln und Ordner /data erstellen:
 ```bash
 git clone https://github.com/Marvin52313114543/nlp-comcast-themen.git
 cd nlp-comcast-themen
+mkdir data
 ```
 
 2. Kaggle Datensatz herunterladen und hier ablegen:
@@ -12,6 +13,11 @@ data/comcast_consumeraffairs_complaints.csv
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
+```
+
+Falls Conda aktiviert ist muss es deaktiviert werden
+```bash
+conda deactivate
 ```
 
 4. Pakete installieren
@@ -56,8 +62,7 @@ pip freeze > requirements.txt
 # Pip installieren und aktualisieren falls nicht installiert oder aktuell
 python -m pip install --upgrade pip
 
-# Falls Conda aktiviert ist muss es deaktiviert werden
-conda deactivate
+
 
 # öffnen von Jupyter Lab
 jupyter lab
