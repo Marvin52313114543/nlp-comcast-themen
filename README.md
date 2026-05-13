@@ -1,25 +1,39 @@
-# NLP Topic Extraction – Comcast Complaints
+## Verwendung Code/Projekt
+1. Repository klonen und in den Projektordner wechseln:
+```bash
+git clone https://github.com/Marvin52313114543/nlp-comcast-themen.git
+cd nlp-comcast-themen
+```
 
-Analyse von Beschwerdetexten mit NLP (BoW/TF-IDF, LSA, LDA).
-Link zum GitHub-Repository: https://github.com/Marvin52313114543/nlp-comcast-themen
+2. Kaggle Datensatz herunterladen und hier ablegen:
+data/comcast_consumeraffairs_complaints.csv
+
+3. Virtuelle Umgebung erstellen und aktivieren:
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+4. Pakete installieren
+```bash
+pip install -r requirements.txt
+```
+
+5. NLTK-Ressourcen einmalig herunterladen:
+```bash
+python -c "import nltk; nltk.download('punkt'); nltk.download('punkt_tab'); nltk.download('stopwords'); nltk.download('wordnet'); nltk.download('omw-1.4')"
+```
+
+6. Projekt starten
+```bash
+jupyter lab
+```
 
 ## Data
 CSV wird nicht ins Repository hochgeladen. Bitte Datensatz von Kaggle herunterladen und unter `data/comcast_consumeraffairs_complaints.csv` ablegen.
 
 Link zum Kaggle Datensatz: https://www.kaggle.com/datasets/archaeocharlie/comcastcomplaints?resource=download&select=comcast_consumeraffairs_complaints.csv
 
-## Setup (macOS)
-```bash
-# Virtuelle Umgebung erstellen
-python3 -m venv .venv
-# Virtuelle Umgebung aktivieren
-source .venv/bin/activate
-# Pakete installieren
-pip install -r requirements.txt
-# NLTK Ressourcen einmalig herunterladen
-python -c "import nltk; nltk.download('punkt'); nltk.download('punkt_tab'); nltk.download('stopwords'); nltk.download('wordnet'); nltk.download('omw-1.4')"
-
-```
 
 ## Import und Tokenisierungstest
 ```bash
